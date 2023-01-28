@@ -1,0 +1,30 @@
+// Prisma docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vacancy {
+  id    Int     @id @default(autoincrement())
+  title  String
+  salary  String?
+  details String?
+  contacts String?
+  publishedAt DateTime @default(now()) @db.Timestamptz(3)
+  categories Category[]
+
+  @@map("vacancies")
+}
+
+model Category {
+  id    Int      @id @default(autoincrement())
+  title  String
+  vacancies Vacancy[]
+
+  @@map("categories")
+}

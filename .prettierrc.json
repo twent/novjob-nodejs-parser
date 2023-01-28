@@ -1,0 +1,14 @@
+{
+	"useTabs": true,
+	"singleQuote": true,
+	"semi": false,
+	"trailingComma": "none",
+	"arrowParens": "avoid",
+	"printWidth": 100,
+	"pluginSearchDirs": ["."],
+	"overrides": [
+		{
+			"files": "*.js"
+		}
+	]
+}

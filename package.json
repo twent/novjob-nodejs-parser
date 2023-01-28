@@ -1,0 +1,37 @@
+{
+	"name": "novjob-nodejs-parser",
+	"version": "0.0.1",
+	"type": "module",
+	"main": "index.js",
+	"keywords": [
+		"parser",
+		"parsing",
+		"job",
+		"vacancies",
+		"vacancy",
+		"nodejs",
+		"async"
+	],
+	"author": {
+		"name": "twent",
+		"email": "i@twent.ru",
+		"url": "https://github.com/twent"
+	},
+	"scripts": {
+		"migrate": "npx prisma migrate dev --name init",
+		"db:admin": "npx prisma studio",
+		"start": "node index.js",
+		"format": "npx prettier --write ."
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@prisma/client": "4.9.0",
+		"async": "^3.2.4",
+		"dotenv": "^16.0.3",
+		"jsdom": "^21.1.0"
+	},
+	"devDependencies": {
+		"prettier": "2.8.3",
+		"prisma": "^4.9.0"
+	}
+}

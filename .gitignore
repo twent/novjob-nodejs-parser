@@ -1,0 +1,7 @@
+.code
+.idea
+node_modules
+result.json
+.env
+data/**/**
+prisma/migrations/**/**
